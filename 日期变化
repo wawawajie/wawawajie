@@ -1,10 +1,10 @@
             int ri = 1;
+            int dis = 5;
             int month = 12;
             int monday = 27;
             do
             {
-                Console.WriteLine("——————{0}月{1}日——————",month,monday);
-                Console.WriteLine("————从{0}到{1}·第{2}天————",nowcity,shuru1,ri);
+                Console.WriteLine("——————{0}月{1}日，第{2}天——————",month,monday);
                 Console.WriteLine(day.nofight());
                 ri++;
                 Console.WriteLine(day.date(month));
