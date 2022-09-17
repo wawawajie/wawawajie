@@ -1,0 +1,4 @@
+                byte[] buffer = Guid.NewGuid().ToByteArray();
+                int iSeed = BitConverter.ToInt32(buffer, 0);
+                Random random = new Random(iSeed);
+                random.Next(1, 3)
