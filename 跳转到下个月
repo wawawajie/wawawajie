@@ -1,0 +1,11 @@
+            public int month(int mon)//跨月
+            {
+                if (1 <= mon && mon <= 11)
+                {
+                    return mon + 1;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
