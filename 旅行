@@ -1,0 +1,21 @@
+            int ri = 1;
+            int month = 12;
+            int monday = 27;
+            do
+            {
+                Console.WriteLine("——————{0}月{1}日——————",month,monday);
+                Console.WriteLine("————从{0}到{1}·第{2}天————",nowcity,shuru1,ri);
+                Console.WriteLine(day.nofight());
+                ri++;
+                Console.WriteLine(day.date(month));
+                if ((monday + 1) <= day.date(month))//如果次日小于本月最大天数
+                {
+                    monday++;//正常加日
+                }
+                else//如果次日大于本月最大天数
+                {
+                    monday = 1;//翻月
+                    month = day.month(month);
+                }
+                Console.ReadLine();
+            } while (ri <= dis);//行动日小于等于预定日
