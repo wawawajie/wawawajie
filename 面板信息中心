@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class text_center : MonoBehaviour
+{
+    Text titletext;//实例化一个文字框
+    // Start is called before the first frame update
+    void Start()
+    {
+        titletext = gameObject.GetComponent<Text>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        string text = titletext.name;//使用文字框名称控制
+        switch (text)
+        {
+            case "text_notice01"://如果是text_notice01文字框
+                titletext.text = "这是第一个窗口";//在文字框显示“这是第一个窗口”
+                break;
+            case "text_notice02":
+                titletext.text = "左下角就是它了";
+                break;
+            case "text_notice03":
+                titletext.text = "角色信息框";
+                break;
+            case "text_team1":
+                titletext.text = "1队精兵强将";
+                break;
+            case "text_team2":
+                titletext.text = "2队精兵强将";
+                break;
+            case "text_team3":
+                titletext.text = "3队精兵强将";
+                break;
+            default:
+                break;
+        }
+    }
+}
