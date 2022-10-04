@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class scene_center : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public Button btn;//实例化一个按键btn
+
+    private void onBtnOnClick()
+    {
+        string btnName = btn.name;//使用按键名作为控制
+        switch (btnName)
+        {
+            case "myteamyes"://如果按下myteamyes按键
+                SceneManager.LoadScene("mainscene");//跳转到mainscene场景
+                break;
+            case "myteamhome"://如果按下myteamhome按键
+                SceneManager.LoadScene("SampleScene");//跳转到SampleScene场景
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void Awake()
+    {
+        btn.onClick.AddListener(onBtnOnClick);
+    }
+}
