@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class myteamchoise : MonoBehaviour
+{
+    Text linshi;
+    public static string how;
+
+    void Start()
+    {
+        linshi = gameObject.GetComponent<Text>();
+        how = "请选择下一步指令。";
+    }
+
+    void Update()
+    {
+        linshi.text = how;
+    }
+}
